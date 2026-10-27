@@ -1,0 +1,128 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    background-color: #ffffff;
+    color: #1e293b;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    min-height: 100vh;
+  }
+}
+
+/* Custom Light Green Gradient Utility Classes */
+.bg-light-green-gradient {
+  background: linear-gradient(135deg, #10b981 0%, #059669 50%, #047857 100%);
+}
+
+.bg-light-green-soft {
+  background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+}
+
+.bg-glass-card {
+  background: rgba(255, 255, 255, 0.90);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.text-gradient-green {
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ecfdf5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #34d399;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #10b981;
+}
+
+/* Button double-click prevention animation */
+.btn-clicked-anim {
+  animation: prevent-double-click 1s ease-out;
+  pointer-events: none !important;
+}
+
+@keyframes prevent-double-click {
+  0% { opacity: 0.8; transform: scale(0.98); }
+  50% { opacity: 0.9; }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes marquee-vertical {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}
+
+.animate-marquee-fast {
+  animation: marquee-vertical 30s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-medium {
+  animation: marquee-vertical 35s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-slow {
+  animation: marquee-vertical 40s linear infinite;
+  will-change: transform;
+}
+
+.mask-image-vertical-fade {
+  mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+}
+
+/* Legal Policy Page Typography */
+.legal-policy-content h1,
+.legal-policy-content h2,
+.legal-policy-content h3 {
+  color: #0f172a;
+  font-weight: 800;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.02em;
+}
+
+.legal-policy-content h2 {
+  font-size: 1.35rem;
+  border-bottom: 1px solid #f1f5f9;
+  padding-bottom: 0.5rem;
+}
+
+.legal-policy-content p {
+  color: #334155;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.legal-policy-content ul,
+.legal-policy-content ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1.25rem;
+  list-style-type: disc;
+  color: #334155;
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+.legal-policy-content li {
+  margin-bottom: 0.5rem;
+}
+
+

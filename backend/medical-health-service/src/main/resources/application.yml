@@ -1,0 +1,42 @@
+server:
+  port: 8087
+  tomcat:
+    max-swallow-size: -1
+    max-http-form-post-size: 500MB
+
+spring:
+  application:
+    name: medical-health-service
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 100MB
+      max-request-size: 500MB
+  config:
+    import:
+      - optional:file:.env[.properties]
+      - optional:file:../.env[.properties]
+      - optional:file:../../.env[.properties]
+  datasource:
+    url: ${MYSQL_URL:jdbc:mysql://${MYSQL_HOST:localhost}:${MYSQL_PORT:3306}/${MYSQL_DATABASE}?createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: ${MYSQL_USER:root}
+    password: ${MYSQL_PASSWORD}
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  data:
+    mongodb:
+      uri: ${MONGO_URI:mongodb://${MONGO_HOST:localhost}:${MONGO_PORT:27017}/${MONGO_DATABASE}}
+      auto-index-creation: true
+
+logging:
+  level:
+    com.jivathunai.medical.health: DEBUG
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/

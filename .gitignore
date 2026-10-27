@@ -1,0 +1,183 @@
+# ==============================================================================
+# Security & Secret Files (CRITICAL - NEVER PUSH TO GITHUB)
+# ==============================================================================
+# Environment variable files
+.env
+.env.*
+*.env
+!.env.example
+
+# Credentials & API Keys
+credentials.json
+client_secret*.json
+secrets/
+*.secret
+*.secrets
+
+# Private Keys, Certificates & Keystores
+*.pem
+*.key
+*.pkcs12
+*.p12
+*.pfx
+*.jks
+*.keystore
+*.crt
+*.cer
+*.der
+id_rsa
+id_rsa.pub
+id_ed25519
+id_ed25519.pub
+
+# ==============================================================================
+# Logs & Log Metadata
+# ==============================================================================
+*.log
+*.log.*
+logs/
+**/logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ==============================================================================
+# Database, Dummy Seed Data & Runtime Files
+# ==============================================================================
+# Embedded H2 / SQLite / LevelDB database files
+*.db
+*.mv.db
+*.lock.db
+*.trace.db
+*.sqlite
+*.sqlite3
+dump.rdb
+
+# Runtime data folders (H2 databases, file storage)
+data/
+**/data/
+uploads/
+**/uploads/
+storage/
+**/storage/
+
+# Dummy / seed dumps & temporary mock files
+*.dump
+*.sql.gz
+*.sql.tar
+dummy_data/
+**/dummy_data/
+seed_data/
+**/seed_data/
+mock_data/
+**/mock_data/
+
+# ==============================================================================
+# IDE & Workspace Metadata (Eclipse / STS / VSCode / IntelliJ)
+# ==============================================================================
+# Eclipse / STS workspace metadata & project files
+.metadata/
+**/.metadata/
+.project
+**/.project
+.classpath
+**/.classpath
+.factorypath
+**/.factorypath
+.settings/
+**/.settings/
+.springBeans
+**/.springBeans
+
+# IntelliJ IDEA
+.idea/
+**/.idea/
+*.iml
+**/*.iml
+*.iws
+*.ipr
+out/
+**/out/
+
+# Visual Studio Code
+.vscode/
+**/.vscode/
+!.vscode/extensions.json
+*.code-workspace
+
+# NetBeans
+nbproject/
+**/nbproject/
+nb-configuration.xml
+
+# ==============================================================================
+# Build Outputs & Compiled Binaries
+# ==============================================================================
+# Maven & Java
+target/
+**/target/
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+
+# Node.js & Frontend Build Outputs
+node_modules/
+**/node_modules/
+dist/
+**/dist/
+dist-ssr/
+**/dist-ssr/
+build/
+**/build/
+.vite/
+**/.vite/
+.eslintcache
+.stylelintcache
+.parcel-cache
+
+# ==============================================================================
+# Operating System & Temporary Files
+# ==============================================================================
+# Windows
+Thumbs.db
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msm
+*.msp
+*.lnk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.Spotlight-V100
+.Trashes
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+
+# ==============================================================================
+# Local Specification, Architecture & Planning Notes (Do Not Push)
+# ==============================================================================
+vetplan.txt
+Vetplanidea.txt
+VETERINARY_SERVICE_SPECIFICATION.md
+planvet.txt
+file.txt
+jivathunailogo.png
+APPENDIX_CODE.txt
+emoji_scan_results.json
+

@@ -1,0 +1,38 @@
+# Environment variables and secrets
+.env
+.env.*
+*.env
+!.env.example
+
+# Credentials & Certificates
+credentials.json
+*.pem
+*.key
+*.p12
+*.jks
+
+# Build target
+target/
+*.class
+*.jar
+*.war
+
+# Logs
+*.log
+logs/
+
+# Embedded H2 / Runtime databases
+data/
+*.mv.db
+*.lock.db
+*.trace.db
+
+# IDE metadata
+.metadata/
+.project
+.classpath
+.factorypath
+.settings/
+.idea/
+*.iml
+.vscode/

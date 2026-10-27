@@ -1,0 +1,43 @@
+server:
+  port: 8086
+
+spring:
+  application:
+    name: payment-wallet-service
+  datasource:
+    url: jdbc:h2:file:./data/paymentdb;AUTO_SERVER=TRUE
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: ${SMTP_USERNAME:your-email@gmail.com}
+    password: ${SMTP_PASSWORD:your-app-password}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+  config:
+    import:
+      - optional:file:.env[.properties]
+      - optional:file:../.env[.properties]
+      - optional:file:../../.env[.properties]
+
+razorpay:
+  api:
+    key:
+      id: ${RAZORPAY_API_KEY_ID}
+      secret: ${RAZORPAY_API_KEY_SECRET}
+  webhook:
+    secret: ${RAZORPAY_WEBHOOK_SECRET}
+  business:
+    name: "Jiva Thunai"
+    logoUrl: "file:///d:/.Nishant/PetCareJT/jivathunailogo.png" # Assuming hosted or local path provided in frontend

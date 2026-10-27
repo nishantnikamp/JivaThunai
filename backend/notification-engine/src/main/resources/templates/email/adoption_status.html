@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Adoption Application Update</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4fbf7; margin: 0; padding: 20px; }
+        .container { max-width: 600px; margin: 0 auto; background: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(16, 185, 129, 0.15); border: 1px solid #d1fae5; }
+        .header { background: linear-gradient(135deg, #059669 0%, #047857 100%); color: #ffffff; padding: 25px 20px; text-align: center; }
+        .content { padding: 30px 25px; color: #1f2937; line-height: 1.6; }
+        .status-badge { display: inline-block; padding: 8px 16px; background-color: #d1fae5; color: #047857; font-weight: bold; border-radius: 20px; margin: 10px 0; }
+        .footer { background-color: #f9fafb; padding: 15px; text-align: center; font-size: 12px; color: #6b7280; border-top: 1px solid #f3f4f6; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h2>🐾 Adoption Application Status Update</h2>
+    </div>
+    <div class="content">
+        <p>Dear <span th:text="${applicantName}">Applicant</span>,</p>
+        <p>Your adoption application for <strong><span th:text="${petName}">Pet</span></strong> has been updated.</p>
+
+        <div>
+            Status: <span class="status-badge" th:text="${status}">APPROVED</span>
+        </div>
+
+        <p><strong>Remarks / Notes:</strong></p>
+        <blockquote th:text="${notes}">Your application meets all PCA Act 1960 compliance guidelines.</blockquote>
+
+        <p>Thank you for giving a loving home to a pet in need!</p>
+    </div>
+    <div class="footer">
+        Jiva Thunai | Prevention of Cruelty to Animals Act 1960 Verified Process
+    </div>
+</div>
+</body>
+</html>
